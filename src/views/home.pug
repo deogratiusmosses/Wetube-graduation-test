@@ -2,7 +2,15 @@ extends ./templates/layout.pug
 include mixins/video
 
 block content
-  each video in videos
-    +video(video)
-  else
-    li  No Content.
+  div.video-grid
+    each video in videos
+      +video(video)
+    else
+      span.empty__message No Content
+
+
+//- block content
+//-   each video in videos
+//-     +video(video)
+//-   else
+//-     li  No Content.

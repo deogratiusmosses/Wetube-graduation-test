@@ -5,7 +5,7 @@ import {
   logout,
   see,
   startGithubLogin,
-  /* finishGithubLogin, */
+  finishGithubLogin,
   getChangePassword,
   postChangePassword,
 } from "../controllers/userController";
@@ -30,7 +30,7 @@ userRouter
   .post(postChangePassword);
 
 userRouter.get("/github/start", publicOnlyMiddleware, startGithubLogin);
-/* userRouter.get("/github/finish", publicOnlyMiddleware, finishGithubLogin); */
+userRouter.get("/github/finish", publicOnlyMiddleware, finishGithubLogin);
 
 userRouter.get("/:id", see);
 
